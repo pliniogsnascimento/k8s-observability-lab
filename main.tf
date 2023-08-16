@@ -1,6 +1,4 @@
 terraform {
-  # backend "azurerm" {}
-
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -13,10 +11,6 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = ">=3.0.0"
-    }
-    kubectl = {
-      source  = "gavinbunney/kubectl"
-      version = ">= 1.7.0"
     }
   }
 }
