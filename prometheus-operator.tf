@@ -1,4 +1,5 @@
 resource "helm_release" "prometheus-operator" {
+  # count            = 0
   name             = "prometheus-operator"
   namespace        = "prometheus"
   create_namespace = true

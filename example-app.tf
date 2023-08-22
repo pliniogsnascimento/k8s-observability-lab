@@ -1,4 +1,5 @@
 resource "kubernetes_manifest" "example-app-deployment" {
+  count = 0
   manifest = yamldecode(<<EOF
 apiVersion: apps/v1
 kind: Deployment
@@ -26,6 +27,7 @@ spec:
 }
 
 resource "kubernetes_manifest" "example-app-service" {
+  count = 0
   manifest = yamldecode(<<EOF
 kind: Service
 apiVersion: v1
@@ -45,6 +47,7 @@ spec:
 }
 
 resource "kubernetes_manifest" "example-app-svcmonitor" {
+  count = 0
   manifest = yamldecode(<<EOF
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor

@@ -29,6 +29,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "msnodepool" {
   kubernetes_cluster_id = module.aks.aks_id
   vm_size               = var.agents_size
   node_count            = var.microservice_nodepool_agents_count
+  priority              = "Spot"
 
   node_labels = {
     "scope" = "Applications"
