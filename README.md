@@ -12,13 +12,14 @@ All infrastucture is provisioned with terraform, tho I'm thinking of switch afte
 
 - [x] Prometheus Operator
 - [x] Grafana
-- [ ] Loki
+- [x] Loki
 - [ ] Tempo
 - [ ] Mimir
+- [x] Ingress Controller
 
 # Deploying the Infrastructure
 
 ```bash
-terraform plan -out out.plan -var-file=./environments/dev.tfvars
+terraform plan -out out.plan
 terraform apply "out.plan"
 ```

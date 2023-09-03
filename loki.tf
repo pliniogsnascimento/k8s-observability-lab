@@ -6,7 +6,7 @@ resource "helm_release" "loki" {
   repository       = "https://grafana.github.io/helm-charts"
   version          = "5.14.1"
 
-  values = [file("${path.module}/values/loki.yaml")]
+  values = [file("${path.module}/helm/values/loki.yaml")]
 }
 
 resource "helm_release" "promtail" {
@@ -17,5 +17,5 @@ resource "helm_release" "promtail" {
   repository       = "https://grafana.github.io/helm-charts"
   version          = "6.14.1"
 
-  values = [file("${path.module}/values/promtail.yaml")]
+  values = [file("${path.module}/helm/values/promtail.yaml")]
 }
